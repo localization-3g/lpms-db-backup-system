@@ -1,0 +1,8 @@
+Important Note
+
+mongoexport.exe and mongoimport.exe are not included in mongodb installer from ver 4.4.x in Windows.
+Please download mongo database tools and set PATH in your Windows.
+
+https://www.mongodb.com/try/download/database-tools
+
+
