@@ -17,10 +17,14 @@ mongoexport.exe --uri="mongodb://10.98.84.13:27020/lpms"  --jsonArray --collecti
 mongoexport.exe --uri="mongodb://10.98.84.13:27020/lpms"  --jsonArray --collection=projects  --out=projects.json
 mongoexport.exe --uri="mongodb://10.98.84.13:27020/lpms"  --jsonArray --collection=users     --out=users.json
 
-copy documents.json   .\archived\%YMD%_documents.json
-copy forms.json       .\archived\%YMD%_forms.json
-copy projects.json    .\archived\%YMD%_projects.json
-copy users.json       .\archived\%YMD%_users.json
+call powershell Compress-Archive ^
+     -Force -Path ^
+     .\documents.json,^
+     .\forms.json,^
+     .\projects.json,^
+     .\users.json ^
+     -DestinationPath ^
+     .\archived\LPMS_collection_%YMD%.zip
 
 popd
 rem pause
