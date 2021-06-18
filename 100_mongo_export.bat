@@ -10,21 +10,25 @@ del -y documents.json
 del -y forms.json
 del -y projects.json
 del -y users.json
+del -y comments.json
 
 echo %YMD% %HMS% > backup_date.txt
 mongoexport.exe --uri="mongodb://10.98.84.13:27020/lpms"  --jsonArray --collection=documents --out=documents.json
 mongoexport.exe --uri="mongodb://10.98.84.13:27020/lpms"  --jsonArray --collection=forms     --out=forms.json
 mongoexport.exe --uri="mongodb://10.98.84.13:27020/lpms"  --jsonArray --collection=projects  --out=projects.json
 mongoexport.exe --uri="mongodb://10.98.84.13:27020/lpms"  --jsonArray --collection=users     --out=users.json
+mongoexport.exe --uri="mongodb://10.98.84.13:27020/lpms"  --jsonArray --collection=comments  --out=comments.json
+rem pause
 
 call powershell Compress-Archive ^
      -Force -Path ^
      .\documents.json,^
      .\forms.json,^
      .\projects.json,^
-     .\users.json ^
+     .\users.json,^
+     .\comments.json ^
      -DestinationPath ^
-     .\archived\LPMS_collection_%YMD%.zip
+     .\archived\LPMS_collection_%YMD%_%HMS%.zip
 
 popd
 rem pause
