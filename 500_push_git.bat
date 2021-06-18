@@ -9,4 +9,4 @@ git config --global http.proxy http://proxy.sgp.fujixerox.com:8000
 git push https://%GIT_TOKEN%:x-oauth-basic@github.com/localization-3g/lpms-db.git
 popd
 
-pause 
+rem pause 

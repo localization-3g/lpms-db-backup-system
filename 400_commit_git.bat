@@ -14,4 +14,4 @@ git commit -m %COMMIT_COMMENT%
 
 popd
 
- pause 
+rem pause 
