@@ -23,5 +23,5 @@ https://github.com/localization-3g/lpms-db/tree/master/backup
   
 ### Operation  
 All backup and Github process are executed by Task scheduler daily.  
-Manual operation is not requred.  
+Manual operation is not requred.   
 
