@@ -4,7 +4,7 @@
 This repository is used for LPMS database collection backup from LPMS production environment.  
 This system is installed in same server as lpms production.  
 
-### Data from  
+### Backup from  
 LPMS production Env.  
 Server is tr-shiga as of 2021 1Q.  
   
