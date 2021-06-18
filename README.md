@@ -9,10 +9,11 @@ LPMS production Env.
 Server is tr-shiga as of 2021 1Q.  
   
 ### Backup to  
-1. Server local HDD  
+1. HDD in server  
+  
 (1a) D:\LPMS_backup\backup    
 This data is overwritten daily.  
-	
+  
 (1b) D:\LPMS_backup\backup\archived  
 This data is added daily. It is not overwritten.   
 It is requred to delete it manually by serer manager.  
