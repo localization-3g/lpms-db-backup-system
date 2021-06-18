@@ -23,6 +23,6 @@ Same data as (1a) are pushed to Github if updated
 https://github.com/localization-3g/lpms-db/tree/master/backup  
   
 ### Operation  
-All backup and Github process are executed by Task scheduler daily.  
-Manual operation is not requred.   
+All backup and Github process are executed by Task scheduler daily in the server.   
+Manual operation is not requred basically.   
 
