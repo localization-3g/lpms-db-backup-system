@@ -6,13 +6,14 @@ set BACKUP_DIR1=D:\LPMS_backup\backup
 pushd %BACKUP_DIR1%
 
 del -y backup_date.txt
-del -y documents.json
-del -y forms.json
-del -y projects.json
-del -y users.json
 del -y comments.json
+del -y documents.json
 del -y emails.json
 del -y eml_files.json
+del -y forms.json
+del -y reports.json
+del -y projects.json
+del -y users.json
 
 echo %YMD% %HMS% > backup_date.txt
 mongoexport.exe --uri="mongodb://10.98.84.13:27020/lpms"  --jsonArray --collection=comments  --out=comments.json
